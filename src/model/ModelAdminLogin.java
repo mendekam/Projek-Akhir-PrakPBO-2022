@@ -2,7 +2,10 @@ package model;
 
 import connector.Koneksi;
 import controller.ControllerAdminLogin;
+import controller.ControllerMenuAdmin;
+import controller.ControllerMenuUser;
 import view.ViewAdminLogin;
+import view.ViewMenuAdmin;
 import view.ViewMenuUser;
 
 import javax.swing.*;
@@ -19,7 +22,9 @@ public class ModelAdminLogin {
             if(resultSet.next()){
                 if(username.equals(resultSet.getString("username")) && password.equals(resultSet.getString("password"))){
                     JOptionPane.showMessageDialog(null, "Berhasil Login");
-                    new ViewMenuUser();
+                    ViewMenuAdmin viewMenuAdmin = new ViewMenuAdmin();
+                    ModelMenuAdmin modelMenuAdmin = new ModelMenuAdmin();
+                    ControllerMenuAdmin controllerMenuAdmin = new ControllerMenuAdmin(viewMenuAdmin, modelMenuAdmin);
 
                 }
                 else{

@@ -1,6 +1,7 @@
 package controller;
 
 import model.ModelAdminLogin;
+import model.ModelRegister;
 import model.ModelUserLogin;
 import view.ViewAdminLogin;
 import view.ViewMenuAwal;
@@ -40,7 +41,9 @@ public class ControllerMenuAwal {
         view.buttonDaftarUser.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ViewRegister();
+                ViewRegister viewRegister = new ViewRegister();
+                ModelRegister modelRegister = new ModelRegister();
+                ControllerRegister controllerRegister = new ControllerRegister(viewRegister, modelRegister);
                 view.dispose();
             }
         });

@@ -1,6 +1,7 @@
 package model;
 
 import connector.Koneksi;
+import controller.ControllerMenuUser;
 import controller.ControllerUserLogin;
 import view.ViewMenuUser;
 import view.ViewUserLogin;
@@ -10,6 +11,7 @@ import java.sql.ResultSet;
 
 public class ModelUserLogin {
     Koneksi koneksi = new Koneksi();
+    String userID;
 
     public void readDataUser(String username, String password){
         try {
@@ -19,8 +21,10 @@ public class ModelUserLogin {
             if(resultSet.next()){
                 if(username.equals(resultSet.getString("username")) && password.equals(resultSet.getString("password"))){
                     JOptionPane.showMessageDialog(null, "Berhasil Login");
-                    new ViewMenuUser();
-
+                    userID = resultSet.getString("id");
+                    ViewMenuUser viewMenuUser = new ViewMenuUser();
+                    ModelMenuUser modelMenuUser = new ModelMenuUser(userID);
+                    ControllerMenuUser controllerMenuUser = new ControllerMenuUser(viewMenuUser, modelMenuUser);
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "Password Salah");
