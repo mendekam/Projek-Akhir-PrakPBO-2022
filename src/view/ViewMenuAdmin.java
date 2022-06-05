@@ -8,6 +8,7 @@ public class ViewMenuAdmin extends JFrame {
     JLabel l = new JLabel("");
 
     public JButton buttonDelete = new JButton("Delete");
+    public JButton buttonLogout = new JButton("Logout");
 
     public JTable tabel;
     DefaultTableModel dtm;
@@ -30,6 +31,9 @@ public class ViewMenuAdmin extends JFrame {
         add(buttonDelete);
         buttonDelete.setBounds(520,190,120,20);
 
+        add(buttonLogout);
+        buttonLogout.setBounds(520,220,120,20);
+
         add(l);
         l.setBounds(10,10,10,10);
 
@@ -37,6 +41,7 @@ public class ViewMenuAdmin extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
         setLayout(null);
+        setLocationRelativeTo(null);
     }
 
 }

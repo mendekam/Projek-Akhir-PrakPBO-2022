@@ -20,7 +20,7 @@ public class ViewRegister extends JFrame {
 
     public ViewRegister() {
         setTitle("Daftar Member");
-        setSize(470, 300);
+        setSize(470, 320);
 
         setLayout(null);
         add(labelJudul);
@@ -44,7 +44,7 @@ public class ViewRegister extends JFrame {
 
         buttonDaftar.setBounds(110, 200, 120, 20);
         buttonReset.setBounds(240, 200, 120, 20);
-        buttonKembali.setBounds(110, 220, 250, 20);
+        buttonKembali.setBounds(110, 230, 250, 20);
 
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

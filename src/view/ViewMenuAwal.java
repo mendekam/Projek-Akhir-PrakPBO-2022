@@ -18,7 +18,7 @@ public class ViewMenuAwal extends JFrame {
         add(buttonLoginAdmin);
         add(buttonDaftarUser);
 
-        labelJudul.setBounds(130, 40, 200, 20);
+        labelJudul.setBounds(95, 40, 200, 20);
         buttonLoginUser.setBounds(100, 100, 120, 20);
         buttonLoginAdmin.setBounds(100, 130, 120, 20);
         buttonDaftarUser.setBounds(100, 160, 120, 20);

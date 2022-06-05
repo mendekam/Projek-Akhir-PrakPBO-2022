@@ -1,6 +1,5 @@
 import controller.ControllerMenuAwal;
 import view.ViewMenuAwal;
-import view.ViewMenuUser;
 
 public class Main {
 

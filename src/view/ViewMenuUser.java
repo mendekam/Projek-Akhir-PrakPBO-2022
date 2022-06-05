@@ -75,6 +75,8 @@ public class ViewMenuUser extends JFrame{
         add(buttonLogout);
         buttonLogout.setBounds(510, 250, 90, 20);
 
+        setLocationRelativeTo(null);
+
     }
 
     public String getNama(){
